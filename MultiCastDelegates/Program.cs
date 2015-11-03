@@ -13,7 +13,7 @@ namespace MultiCastDelegates
     {
         static void Main(string[] args)
         {
-            SampleDelegate samp4, samp1, samp2, samp3;
+            SampleDelegate samp4, samp1, samp2, samp3, samp5;
             SampleDelegate del1 = new SampleDelegate(SampleMethodOne);
             del1 += SampleMethodTwo;
             del1();
@@ -21,8 +21,9 @@ namespace MultiCastDelegates
             samp1 = new SampleDelegate(SampleMethodOne);
             samp2 = new SampleDelegate(SampleMethodTwo);
             samp3 = new SampleDelegate(SampleMethodThree);
+            samp5 = new SampleDelegate(SampleMethodFour);
 
-            samp4 = samp1 + samp2 + samp3;
+            samp4 = samp1 + samp2 + samp3 + samp5 - samp1;
 
             samp4();
 
@@ -58,6 +59,10 @@ namespace MultiCastDelegates
         public static void SampleMethodThree()
         {
             Console.WriteLine("SampleMethodThree Invoked");
+        }
+        public static void SampleMethodFour()
+        {
+            Console.WriteLine("SampleMethodFour - Invoked");
         }
     }
 }
