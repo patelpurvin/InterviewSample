@@ -23,7 +23,7 @@ namespace Sample
 
         private string _firstname;
         private string _lastname;
-        private string _middlename;
+        private string _MiddleName;
 
         public string FirstName
         {
@@ -37,8 +37,8 @@ namespace Sample
         }
         public string MiddleName
         {
-            get { return _middlename; }
-            set { _middlename = value; }
+            get { return _MiddleName; }
+            set { _MiddleName = value; }
         }
         public string GetFullName()
         {
