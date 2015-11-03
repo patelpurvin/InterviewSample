@@ -21,15 +21,10 @@ namespace Sample
     public class Customer
     {
 
-        private int _id;
         private string _firstname;
         private string _lastname;
+        private string _MiddleName;
 
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
         public string FirstName
         {
             get { return _firstname; }
@@ -39,6 +34,11 @@ namespace Sample
         {
             get { return _lastname; }
             set { _lastname = value; }
+        }
+        public string MiddleName
+        {
+            get { return _MiddleName; }
+            set { _MiddleName = value; }
         }
         public string GetFullName()
         {
